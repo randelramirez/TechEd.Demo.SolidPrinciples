@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. RAG", "0. RAG", "{170B66A8-0C34-4054-80A3-3404EB8A3C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechEd.Demo.SolidPrinciples", "TechEd.Demo.SolidPrinciples\TechEd.Demo.SolidPrinciples.csproj", "{C34C95C6-D775-4A88-95C3-3DBA0AC02204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. SRP", "1. SRP", "{21D05665-CB0F-405C-BD6E-AED66813BB8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. OCP", "2. OCP", "{69C9B9FB-9DB6-4181-A6AB-2D9770AD328A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. LSP", "3. LSP", "{F4D2FDE7-6EFA-4D74-8A30-5E31C377E75C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. ISP", "4. ISP", "{AE473696-D155-4239-AFAA-25A8D1A7FC00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. DIP", "5. DIP", "{7F1A0C74-0D63-4A69-BE6D-EA4E12C10D56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechEd.Demo.SolidPrinciples.Refactored", "TechEd.Demo.SolidPrinciples.Refactored\TechEd.Demo.SolidPrinciples.Refactored.csproj", "{065C3396-9E51-457D-AC20-A879D488C402}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C34C95C6-D775-4A88-95C3-3DBA0AC02204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34C95C6-D775-4A88-95C3-3DBA0AC02204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34C95C6-D775-4A88-95C3-3DBA0AC02204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34C95C6-D775-4A88-95C3-3DBA0AC02204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065C3396-9E51-457D-AC20-A879D488C402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065C3396-9E51-457D-AC20-A879D488C402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065C3396-9E51-457D-AC20-A879D488C402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065C3396-9E51-457D-AC20-A879D488C402}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C34C95C6-D775-4A88-95C3-3DBA0AC02204} = {170B66A8-0C34-4054-80A3-3404EB8A3C61}
+		{065C3396-9E51-457D-AC20-A879D488C402} = {170B66A8-0C34-4054-80A3-3404EB8A3C61}
+	EndGlobalSection
+EndGlobal
