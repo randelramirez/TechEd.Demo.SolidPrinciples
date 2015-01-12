@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. RAG", "0. RAG", "{170B66A8-0C34-4054-80A3-3404EB8A3C61}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. SAR", "0. SAR", "{170B66A8-0C34-4054-80A3-3404EB8A3C61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechEd.Demo.SolidPrinciples", "TechEd.Demo.SolidPrinciples\TechEd.Demo.SolidPrinciples.csproj", "{C34C95C6-D775-4A88-95C3-3DBA0AC02204}"
 EndProject
@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. DIP", "5. DIP", "{7F1A0C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechEd.Demo.SolidPrinciples.Refactored", "TechEd.Demo.SolidPrinciples.Refactored\TechEd.Demo.SolidPrinciples.Refactored.csproj", "{065C3396-9E51-457D-AC20-A879D488C402}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechEd.Demo.SolidPrinciples.Srp", "TechEd.Demo.SolidPrinciples.Srp\TechEd.Demo.SolidPrinciples.Srp.csproj", "{3DA18703-6ACE-4A2A-BEB0-42064AF25901}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{065C3396-9E51-457D-AC20-A879D488C402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{065C3396-9E51-457D-AC20-A879D488C402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{065C3396-9E51-457D-AC20-A879D488C402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA18703-6ACE-4A2A-BEB0-42064AF25901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA18703-6ACE-4A2A-BEB0-42064AF25901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA18703-6ACE-4A2A-BEB0-42064AF25901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA18703-6ACE-4A2A-BEB0-42064AF25901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,5 +46,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C34C95C6-D775-4A88-95C3-3DBA0AC02204} = {170B66A8-0C34-4054-80A3-3404EB8A3C61}
 		{065C3396-9E51-457D-AC20-A879D488C402} = {170B66A8-0C34-4054-80A3-3404EB8A3C61}
+		{3DA18703-6ACE-4A2A-BEB0-42064AF25901} = {21D05665-CB0F-405C-BD6E-AED66813BB8A}
 	EndGlobalSection
 EndGlobal

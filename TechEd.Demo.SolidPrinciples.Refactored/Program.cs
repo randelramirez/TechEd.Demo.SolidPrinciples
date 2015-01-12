@@ -3,6 +3,12 @@ using System.IO;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
+// Nouns are classes, verbs are their functions and adjectives are their properties.
+// Имена существительные классы, глаголы их функции, а прилогательные их свойства.
+
+// Но если мы хотим разрабатывать систему которая будет гибкой то мы должны смотреть
+// (не всегда) на глаголы как на классы.
+
 namespace TechEd.Demo.SolidPrinciples.Refactored
 {
     internal class Program
@@ -17,11 +23,8 @@ namespace TechEd.Demo.SolidPrinciples.Refactored
 
             var input = GetInput(sourceFilePath);
             var doc = GetDocument(input);
-
-
-
-            Console.WriteLine("{0}\n{1}", doc.Title, doc.Text);
-            Console.ReadKey();
+            var serializedDoc = SerializeDocument(doc);
+            SaveDocument(serializedDoc, targetFilePath);
         }
 
         #region Private Helpers
@@ -41,13 +44,25 @@ namespace TechEd.Demo.SolidPrinciples.Refactored
         {
             var xdoc = XDocument.Parse(input);
 
-            var doc = new Document
+            return new Document
             {
                 Title = xdoc.Root.Element("title").Value,
                 Text = xdoc.Root.Element("text").Value
             };
+        }
 
-            return doc;
+        private static string SerializeDocument(Document doc)
+        {
+            return JsonConvert.SerializeObject(doc);
+        }
+
+        private static void SaveDocument(string serializedDoc, string targetFilePath)
+        {
+            using (var stream = new FileStream(targetFilePath, FileMode.Create))
+            using (var streamWriter = new StreamWriter(stream))
+            {
+                streamWriter.Write(serializedDoc);
+            }
         }
 
         #endregion

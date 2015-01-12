@@ -3,6 +3,12 @@ using System.IO;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
+// Nouns are classes, verbs are their functions and adjectives are their properties.
+// Имена существительные классы, глаголы их функции, а прилогательные их свойства.
+
+// Но если мы хотим разрабатывать систему которая будет гибкой то мы должны смотреть
+// (не всегда) на глаголы как на классы.
+
 namespace TechEd.Demo.SolidPrinciples
 {
     internal class Program

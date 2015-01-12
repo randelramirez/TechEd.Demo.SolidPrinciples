@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root>
-  <title>Hello World From XML File</title>
-  <text>Hello Im tring to achive SOLID principles using C# and .NET Framework.</text>
+  <title>Learning Single Responsibility Principle (SRP)</title>
+  <text>In reference to this I would say "A class should have a single responsibility". Let's dive into the ocean. To read this like "a class should not be designed to do multiple activities", so, what kind of activities?
+  Let's think. I need to design a system that provides me employee details, so it should include activities. Generally I have Create, Read, Update and Delete (CRUD) operations. Now, as in the Single responsibility principle, I need to design a class, that should do any of these operations but not all of these.
+  </text>
 </root>
