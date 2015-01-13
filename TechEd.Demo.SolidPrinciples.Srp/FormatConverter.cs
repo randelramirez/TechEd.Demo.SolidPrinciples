@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace TechEd.Demo.SolidPrinciples.Srp
 {
     public class FormatConverter
     {
         private readonly DocumentStorage _documentStorage;
+        private readonly InputParser _inputParser;
+        private readonly DocumentSerializer _documentSerializer;
 
         public FormatConverter()
         {
             this._documentStorage = new DocumentStorage();
+            this._inputParser = new InputParser();
+            this._documentSerializer = new DocumentSerializer();
         }
 
         public bool ConvertFormat(string sourceFileName, string targetFileName)
@@ -22,28 +28,26 @@ namespace TechEd.Demo.SolidPrinciples.Srp
 
             try
             {
-                input = this._documentStorage.GetData(sourceFileName);
+                input = _documentStorage.GetData(sourceFileName);
             }
             catch (FileNotFoundException)
             {
                 return false;
             }
 
+            var doc = _inputParser.ParseInput(input);
+            var serializedDocument = _documentSerializer.Serialize(doc);
 
+            try
+            {
+                _documentStorage.SaveData(serializedDocument, targetFileName);
+            }
+            catch (AccessViolationException)
+            {
+                return false;
+            }
 
             return true;
-        }
-    }
-
-    public class DocumentStorage
-    {
-        public string GetData(string fileName)
-        {
-            if (!File.Exists(fileName)) throw new FileNotFoundException();
-
-            using (var stream = File.OpenRead(fileName))
-            using (var streamReader = new StreamReader(stream))
-                return streamReader.ReadToEnd();
         }
     }
 }
